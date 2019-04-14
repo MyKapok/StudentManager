@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <display-name>student_manage_servlet</display-name>
+
+
+    <context-param>
+        <param-name>jdbc_url</param-name>
+        <param-value>jdbc:mysql://localhost:3306/db_studentinfo?useSSL=false</param-value>
+    </context-param>
+    <context-param>
+        <param-name>jdbc_username</param-name>
+        <param-value>root</param-value>
+    </context-param>
+    <context-param>
+        <param-name>jdbc_password</param-name>
+        <param-value>123456</param-value>
+    </context-param>
+
+
+    <servlet>
+        <servlet-name>gradeListServlet</servlet-name>
+        <servlet-class>com.bittech.student.web.GradeListServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>gradeComboListServlet</servlet-name>
+        <servlet-class>com.bittech.student.web.GradeComboListServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>studentListServlet</servlet-name>
+        <servlet-class>com.bittech.student.web.StudentListServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>gradeSaveServlet</servlet-name>
+        <servlet-class>com.bittech.student.web.GradeSaveServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>studentSaveServlet</servlet-name>
+        <servlet-class>com.bittech.student.web.StudentSaveServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>gradeDeleteServlet</servlet-name>
+        <servlet-class>com.bittech.student.web.GradeDeleteServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>studentDeleteServlet</servlet-name>
+        <servlet-class>com.bittech.student.web.StudentDeleteServlet</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>gradeListServlet</servlet-name>
+        <url-pattern>/gradeList</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>gradeComboListServlet</servlet-name>
+        <url-pattern>/gradeComboList</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>studentListServlet</servlet-name>
+        <url-pattern>/studentList</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>gradeDeleteServlet</servlet-name>
+        <url-pattern>/gradeDelete</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>studentDeleteServlet</servlet-name>
+        <url-pattern>/studentDelete</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>gradeSaveServlet</servlet-name>
+        <url-pattern>/gradeSave</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>studentSaveServlet</servlet-name>
+        <url-pattern>/studentSave</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>default.html</welcome-file>
+        <welcome-file>default.htm</welcome-file>
+        <welcome-file>default.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>
