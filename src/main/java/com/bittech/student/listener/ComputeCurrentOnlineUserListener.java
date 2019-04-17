@@ -8,10 +8,7 @@ import javax.servlet.annotation.WebListener;
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 
-/**
- * Author: secondriver
- * Created: 2018/9/14
- */
+
 @WebListener
 public class ComputeCurrentOnlineUserListener implements HttpSessionListener {
     
