@@ -8,10 +8,6 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
-/**
- * Author: secondriver
- * Created: 2018/9/14
- */
 @WebListener
 public class ApplicationConfigListener implements ServletContextListener {
     
