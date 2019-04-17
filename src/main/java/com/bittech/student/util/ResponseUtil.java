@@ -3,6 +3,7 @@ package com.bittech.student.util;
 import javax.servlet.http.HttpServletResponse;
 import java.io.PrintWriter;
 
+//推送消息
 public class ResponseUtil {
 
 	public static void write(HttpServletResponse response,Object o)throws Exception{
