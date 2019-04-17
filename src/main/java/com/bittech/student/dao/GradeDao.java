@@ -36,13 +36,7 @@ public class GradeDao {
 		}
 	}
 	
-	/**
-	 * delete from tableName where field in (1,3,5)
-	 * @param con
-	 * @param delIds
-	 * @return
-	 * @throws Exception
-	 */
+
 	public int gradeDelete(Connection con,String delIds)throws Exception{
 		String sql="delete from t_grade where id in("+delIds+")";
 		PreparedStatement pstmt=con.prepareStatement(sql);
