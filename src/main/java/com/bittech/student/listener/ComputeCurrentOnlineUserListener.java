@@ -10,13 +10,16 @@ import javax.servlet.http.HttpSessionListener;
 
 
 @WebListener
+//监听当前在线人数
 public class ComputeCurrentOnlineUserListener implements HttpSessionListener {
     
     private static Logger logger = LoggerFactory.getLogger(ComputeCurrentOnlineUserListener.class);
     
     @Override
     public void sessionCreated(HttpSessionEvent se) {
+        //从已更改的session里获取servlet上下文
         ServletContext servletContext = se.getSession().getServletContext();
+        //获取onlineUser参数值
         Object onlineUserValue = servletContext.getAttribute("onlineUser");
         if (onlineUserValue == null) {
             onlineUserValue = 0;
